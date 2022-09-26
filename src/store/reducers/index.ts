@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux'
-import { usersTask } from './UsersTask'
+import { combineReducers } from 'redux';
+import { usersTask } from './UsersTask';
 
-export const rootReducer = combineReducers({ usersTask })
+export const rootReducer = combineReducers({ usersTask });
 
-export type RootState = ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof rootReducer>;

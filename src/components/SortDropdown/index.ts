@@ -1,3 +1,3 @@
-import SortDropdown from './SortTask'
+import SortDropdown from './SortTask';
 
-export { SortDropdown }
+export { SortDropdown };

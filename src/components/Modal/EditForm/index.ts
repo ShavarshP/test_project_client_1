@@ -1,3 +1,3 @@
-import { EditForm } from './EditForm'
+import { EditForm } from './EditForm';
 
-export { EditForm }
+export { EditForm };

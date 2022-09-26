@@ -1,4 +1,4 @@
-import * as Authentication from './Auth'
-import * as Task from './Task'
+import * as Authentication from './Auth';
+import * as Task from './Task';
 
-export default { ...Authentication, ...Task }
+export default { ...Authentication, ...Task };

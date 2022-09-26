@@ -1,3 +1,3 @@
-import UsersTask from './UsersTask'
+import UsersTask from './UsersTask';
 
-export { UsersTask }
+export { UsersTask };
