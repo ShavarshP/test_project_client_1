@@ -15,9 +15,14 @@ export enum UserActionTypes {
     FETCH_USER_ERROR = 'FETCH_USER_ERROR',
     TASK_DATA_UPDATE = 'TASK_DATA_UPDATE',
     TASK_UPDATE_COUNT = 'TASK_UPDATE_COUNT',
+    LOADING_START = 'LOADING_START',
     USER_LOGOUT = 'USER_LOGOUT',
     ADD_DATA = 'ADD_DATA',
     DELETE_USER_TASK = 'DELETE_USER_TASK',
+}
+
+interface LoadingStart {
+    type: UserActionTypes.LOADING_START;
 }
 
 interface FetchUserErrorAction {
@@ -62,5 +67,6 @@ export type UserAction =
     | GetTaskData
     | GetTaskCount
     | FetchUserErrorAction
+    | LoadingStart
     | UserLogout
     | AddContactsData;

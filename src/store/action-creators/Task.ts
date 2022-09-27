@@ -37,6 +37,10 @@ export const getTask = (
 ) => {
     return async (dispatch: Dispatch<UserAction>) => {
         try {
+            dispatch({
+                type: UserActionTypes.LOADING_START,
+            });
+
             const { data } = await axios.get(
                 `${API_URL}/tasks?page=${page}&amount=${amount}${sortNameParams ? `&name=${sortNameParams}` : ''}${
                     sortEmailParams ? `&email=${sortEmailParams}` : ''

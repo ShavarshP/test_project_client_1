@@ -1,7 +1,7 @@
 import { UserAction, UserActionTypes, UserTask } from 'store/types';
 
 interface StateTyp {
-    loading: boolean;
+    isLoading: boolean;
     count: number;
     isAuth: boolean;
     updateCount: number;
@@ -10,7 +10,7 @@ interface StateTyp {
 }
 
 const initialState: StateTyp = {
-    loading: true,
+    isLoading: true,
     count: 0,
     updateCount: 0,
     countPageTask: 3,
@@ -21,13 +21,15 @@ const initialState: StateTyp = {
 export const usersTask = (state = initialState, action: UserAction): StateTyp => {
     switch (action.type) {
         case UserActionTypes.TASK_DATA_UPDATE:
-            return { ...state, tasks: action.payload };
+            return { ...state, isLoading: false, tasks: action.payload };
         case UserActionTypes.FETCH_USER_ERROR:
-            return { ...state, loading: false };
+            return { ...state, isLoading: true };
         case UserActionTypes.TASK_DATA_COUNT:
             return { ...state, count: action.payload };
         case UserActionTypes.USER_LOGIN:
             return { ...state, isAuth: true };
+        case UserActionTypes.LOADING_START:
+            return { ...state, isLoading: true };
         case UserActionTypes.USER_LOGOUT:
             return { ...state, isAuth: false };
         case UserActionTypes.TASK_UPDATE_COUNT:
